@@ -56,6 +56,8 @@ group :development, :test do
   gem 'quiet_assets'
 
   gem 'rack-mini-profiler'
+
+  gem 'xray-rails'
 end
 
 group :production do
