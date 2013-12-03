@@ -1,5 +1,9 @@
 MyToDo::Application.routes.draw do
-  resources :tasks
+  resources :tasks do
+    collection do
+      get 'undone'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
