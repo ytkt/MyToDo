@@ -1,0 +1,28 @@
+<h1>やってないことリスト</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Due date</th>
+      <th>Done</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <ul class="list">
+    <% @tasks.each do |task| %>
+      <li>
+        <p><%= task.name %></p>
+        <p><%= task.due_date %></p>
+        <p><%= task.done %></p>
+      </li>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
