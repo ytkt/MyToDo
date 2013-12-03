@@ -1,29 +1,24 @@
 <h1>list of undone</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>名前だよ</th>
-      <th>やる日</th>
-      <th>やった</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="task-undone">
 
-  <tbody>
+<!-- ul.undone-list>li*6>a -->
+<ul class="undone-list">
+  <li>タスク名</li>
+  <li>やる日</li>
+  <li>やった日</li>
+</ul>
+
+
+  <ul class="undone-list-content">
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.name %></td>
-        <td><%= task.due_date %></td>
-        <td><%= task.done %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li>
+        <p><%= task.name %></p>
+        <p><%= task.due_date %></p>
+        <p><%= task.done %></p>
+      </li>
     <% end %>
-  </tbody>
-</table>
+  </ul>
+</div>
 
 <%= link_to 'New Task', new_task_path %>
