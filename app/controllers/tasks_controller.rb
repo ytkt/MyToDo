@@ -1,6 +1,10 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+  def undone
+    @tasks = Task.where("done = ?", false)
+  end
+
   # GET /tasks
   # GET /tasks.json
   def index
