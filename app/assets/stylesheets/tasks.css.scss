@@ -10,17 +10,17 @@
 	background: #fff;
 	display: -webkit-box;
 	li{
-		box-flex:1;
+		-webkit-box-flex:1;
 	}
 }
 
 .undone-list-content{
 	padding: 10px;
 	background: red;
-	display: -webkit-box;
 	li{
+		display: -webkit-box;
 		p{
-		box-flex:1;
+		-webkit-box-flex:1;
 		}
 	}
 }
