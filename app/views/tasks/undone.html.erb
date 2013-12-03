@@ -1,4 +1,4 @@
-<h1>List of undone</h1>
+<h1>やってないことリスト</h1>
 
 <table>
   <thead>
@@ -12,16 +12,13 @@
     </tr>
   </thead>
 
-  <tbody>
+  <ul class="list">
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.name %></td>
-        <td><%= task.due_date %></td>
-        <td><%= task.done %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li>
+        <p><%= task.name %></p>
+        <p><%= task.due_date %></p>
+        <p><%= task.done %></p>
+      </li>
     <% end %>
   </tbody>
 </table>
