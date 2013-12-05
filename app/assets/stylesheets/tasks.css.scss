@@ -16,7 +16,7 @@
 
 .undone-list-content{
 	padding: 10px;
-	background: red;
+	background: #eee;
 	li{
 		display: -webkit-box;
 		p{
@@ -24,3 +24,14 @@
 		}
 	}
 }
+
+// mobile
+.mobile{
+	.undone-list{
+		background: #eee;
+	}
+	.undone-list-content{
+		background: green;
+	}
+}
+
