@@ -55,7 +55,7 @@ group :development, :test do
 
   gem 'quiet_assets'
 
-  gem 'rack-mini-profiler'
+#  gem 'rack-mini-profiler'
 
   gem 'xray-rails'
 end
@@ -63,3 +63,6 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'jpmobile'
+gem 'jpmobile-terminfo'
