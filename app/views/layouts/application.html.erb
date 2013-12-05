@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<div class="container">
-	<%= yield %>
+<div class="container <% if request.smart_phone? %>mobile<% end %>">
+  <%= yield %>
 </div>
 
 </body>
